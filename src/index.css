@@ -1,1 +1,161 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Zen+Kaku+Gothic+New&display=swap");
+
 @import "tailwindcss";
+
+@theme {
+  --color-primary: #e62727;
+  --color-secondary: #ff6000;
+
+  --font-primary: "Poppins", sans-serif;
+  --font-secondary: "Zen Kaku Gothic New", sans-serif;
+  --font-tertiary: "Bebas Neue", cursive;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.container {
+  max-width: 1450px;
+  margin: 0 auto;
+}
+
+.bg-about {
+  background:
+    linear-gradient(to left, rgb(255, 255, 255, 0.9)),
+    url("../src/assets/photos/allOf.jpeg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.bg-onepiece {
+  background:
+    linear-gradient(to left, rgb(255, 255, 255, 0.9)),
+    url("../src/assets/photos/oneCover.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.onePieceFix {
+  background: url("../src/assets/photos/one.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.narutoFix {
+  background: url("../src/assets/photos/narutoSmall.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.bleachFix {
+  background: url("../src/assets/photos/bleachSmall.jpg");
+  background-position: top center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.bg-naruto {
+  background:
+    linear-gradient(to left, rgb(255, 255, 255, 0.9)),
+    url("../src/assets/photos/bg-naruto.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.bg-bleach {
+  background:
+    linear-gradient(to left, rgb(255, 255, 255, 0.9)),
+    url("../src/assets/photos/bg-bleach.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+@media only screen and (min-width: 1000px) {
+  .onePieceFix {
+    background: url("../src/assets/photos/onePiece.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
+
+  .narutoFix {
+    background: url("../src/assets/photos/narutoFix.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
+
+  .bleachFix {
+    background: url("../src/assets/photos/bleachBanner.jpg");
+    background-position: right;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
+}
+
+/* HAMBURGER MENU */
+.hamburger {
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
+  transition: all 0.25s;
+  position: relative;
+}
+
+.hamburger-top,
+.hamburger-middle,
+.hamburger-bottom {
+  content: "";
+  position: absolute;
+  width: 24px;
+  height: 3px;
+  top: 0;
+  left: 0;
+  background: #fff;
+  transform: rotate(0);
+  transition: all 0.5s;
+}
+
+.hamburger-middle {
+  transform: translateY(7px);
+}
+
+.hamburger-bottom {
+  transform: translateY(14px);
+  background: #fff;
+}
+
+.open {
+  transform: rotate(90deg);
+  transform: translateY(0px);
+  /* position: fixed;
+  top: 25px;
+  right: 25px; */
+}
+
+.open .hamburger-top {
+  transform: rotate(45deg) translateY(6px) translateX(6px);
+  background-color: #fff;
+}
+
+.open .hamburger-middle {
+  display: none;
+}
+
+.open .hamburger-bottom {
+  transform: rotate(-45deg) translateY(6px) translateX(-6px);
+  background-color: #fff;
+}
